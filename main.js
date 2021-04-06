@@ -141,7 +141,8 @@ function run() {
     stats.update();
     last = now;
     requestAnimationFrame(frame, canvas);
-  }
+
+}
 
   resize(); // setup all our sizing information
   reset();  // reset the per-game variables
@@ -188,6 +189,7 @@ function keydown(ev) {
   if (handled)
     ev.preventDefault(); // prevent arrow keys from scrolling the page (supported in IE9+ and all other browsers)
 }
+
 
 //-------------------------------------------------------------------------
 // GAME LOGIC
