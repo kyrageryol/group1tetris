@@ -26,6 +26,39 @@ if (!window.requestAnimationFrame) { // http://paulirish.com/2011/requestanimati
 // game constants
 //-------------------------------------------------------------------------
 
+//============
+//  Nick's Edits
+
+/* idea for speed change:
+    - Do switch statment?
+     - assign speed outside of switch once button is clicked
+*/
+/*
+var speed;
+
+function speedChoice(button) {
+  var x = button.id
+  switch(x) {
+    case 'easy':
+      speed = { start: 0.7, decrement: 0.005, min: 0.1 };
+      play();
+      console.log("Hello World");
+      break;
+    case 'med':
+      speed = { start: 0.7, decrement: 0.005, min: 0.1 };
+      play();
+      break;
+    case 'hard':
+      speed = { start: 0.7, decrement: 0.005, min: 0.1 };
+      play();
+      break;
+    default:
+      return false;
+  }
+}
+*/
+//===========
+
 var KEY     = { ESC: 27, SPACE: 32, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 },
     DIR     = { UP: 0, RIGHT: 1, DOWN: 2, LEFT: 3, MIN: 0, MAX: 3 },
     stats   = new Stats(),
