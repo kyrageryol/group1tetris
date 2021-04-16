@@ -6,12 +6,14 @@
 //
 const audioUrl = "sounds/zapsplat_multimedia_click_001_19367.mp3";
 $('.test').click(() => {
-    alert("ello");
     return new Audio(audioUrl).play();
 });
 
 function playSound(url){
     new Audio(audioUrl).play();
     window.open(url);
+}
+function playBeep(){
+    new Audio(audioUrl).play();
 
 }

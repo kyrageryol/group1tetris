@@ -2,6 +2,7 @@
 //-------------------------------------------------------------------------
 // base helper methods
 //-------------------------------------------------------------------------
+const audioUrl = "sounds/zapsplat_multimedia_click_001_19367.mp3";
 
 function get(id)        { return document.getElementById(id);  }
 function hide(id)       { get(id).style.visibility = 'hidden'; }
@@ -207,6 +208,7 @@ function resize(event) {
 function keydown(ev) {
   var handled = false;
   if (playing) {
+    new Audio(audioUrl).play();
     switch(ev.keyCode) {
       case KEY.LEFT:   actions.push(DIR.LEFT);  handled = true; break;
       case KEY.RIGHT:  actions.push(DIR.RIGHT); handled = true; break;
