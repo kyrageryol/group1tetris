@@ -2,7 +2,16 @@
 //     alert("ello");
 //     document.getElementById('play').play();
 //
-var audioUrl = "http://www.realmofdarkness.net/audio/vg/sf/sf2/perfect.mp3";
-$('.button').click(() => {
+// const test = document.getElementById('test');
+//
+const audioUrl = "sounds/zapsplat_multimedia_click_001_19367.mp3";
+$('.test').click(() => {
+    alert("ello");
     return new Audio(audioUrl).play();
 });
+
+function playSound(url){
+    new Audio(audioUrl).play();
+    window.open(url);
+
+}
