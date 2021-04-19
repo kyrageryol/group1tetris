@@ -3,6 +3,7 @@
 // base helper methods
 //-------------------------------------------------------------------------
 const audioUrl = "sounds/zapsplat_multimedia_click_001_19367.mp3";
+var q;
 
 function get(id)        { return document.getElementById(id);  }
 function hide(id)       { get(id).style.visibility = 'hidden'; }
@@ -27,38 +28,6 @@ if (!window.requestAnimationFrame) { // http://paulirish.com/2011/requestanimati
 // game constants
 //-------------------------------------------------------------------------
 
-//============
-//  Nick's Edits
-
-/* idea for speed change:
-    - Do switch statment?
-     - assign speed outside of switch once button is clicked
-*/
-/*
-var speed;
-
-function speedChoice(button) {
-  var x = button.id
-  switch(x) {
-    case 'easy':
-      speed = { start: 0.7, decrement: 0.005, min: 0.1 };
-      play();
-      console.log("Hello World");
-      break;
-    case 'med':
-      speed = { start: 0.7, decrement: 0.005, min: 0.1 };
-      play();
-      break;
-    case 'hard':
-      speed = { start: 0.7, decrement: 0.005, min: 0.1 };
-      play();
-      break;
-    default:
-      return false;
-  }
-}
-*/
-//===========
 
 var KEY     = { ESC: 27, SPACE: 32, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 },
     DIR     = { UP: 0, RIGHT: 1, DOWN: 2, LEFT: 3, MIN: 0, MAX: 3 },
@@ -67,7 +36,7 @@ var KEY     = { ESC: 27, SPACE: 32, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 },
     ctx     = canvas.getContext('2d'),
     ucanvas = get('upcoming'),
     uctx    = ucanvas.getContext('2d'),
-    speed   = { start: 0.6, decrement: 0.005, min: 0.1 }, // how long before piece drops by 1 row (seconds)
+    speed   = "", //{ start: 0.6, decrement: 0.005, min: 0.1 }, // how long before piece drops by 1 row (seconds)
     nx      = 10, // width of tetris court (in blocks)
     ny      = 20, // height of tetris court (in blocks)
     nu      = 5;  // width/height of upcoming preview (in blocks)
@@ -204,6 +173,30 @@ function resize(event) {
   invalidate();
   invalidateNext();
 }
+
+function speedChoice(button) {
+  var x = button.id
+  switch(x) {
+    case 'easy':
+      q = { start: 0.7, decrement: 0.005, min: 0.1 };
+      speed = q;
+      play();
+      return speed;
+    case 'med':
+      q = { start: 0.4, decrement: 0.005, min: 0.1 };
+      speed = q;
+      play();
+      return speed;
+    case 'hard':
+      q = { start: 0.2, decrement: 0.005, min: 0.1 };
+      speed = q;
+      play();
+      return speed;
+    default:
+      return false;
+  }
+}
+
 
 function keydown(ev) {
   var handled = false;
