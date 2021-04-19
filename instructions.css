@@ -1,6 +1,7 @@
 body {
       font-family: Helvetica, sans-serif;
       background-color: black;
+      background-image: url("instructionsbackground.png");
     }
 
 .instruct
