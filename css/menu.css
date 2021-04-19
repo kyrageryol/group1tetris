@@ -1,7 +1,7 @@
 body {
       font-family: Helvetica, sans-serif;
       background: #20639B;
-      background-image: url("blocks.jpg");
+      background-image: url("../blocks.jpg");
     }
 
 .game-title
