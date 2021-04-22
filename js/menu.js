@@ -17,3 +17,7 @@ function playBeep(){
     new Audio(audioUrl).play();
 
 }
+
+function back() {
+  window.history.back();
+}
