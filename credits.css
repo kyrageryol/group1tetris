@@ -11,10 +11,23 @@ body {
   font-size: 28px;
 }
 
-.history
-{
-  font-family: serif;
+.speech-bubble {
+	position: center;
   text-align: center;
-  color: white;
-  font-size: 18px;
+	background: #edf042;
+	border-radius: .4px;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #edf042;
+	border-bottom: 0;
+	margin-left: -20px;
+	margin-bottom: -20px;
 }
