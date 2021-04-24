@@ -4,6 +4,7 @@
 //-------------------------------------------------------------------------
 const beepUrl = "sounds/zapsplat_multimedia_click_001_19367.mp3";
 const loseUrl = "sounds/zapsplat_human_male_voice_says_game_over_004_15729.mp3";
+const rowCompleteUrl = "sounds/zapsplat_multimedia_game_sound_rise_ascend_arcade_64274.mp3";
 var q;
 
 function get(id)        { return document.getElementById(id);  }
@@ -334,6 +335,7 @@ function removeLines() {
         complete = false;
     }
     if (complete) {
+      new Audio(rowCompleteUrl).play();
       removeLine(y);
       y = y + 1; // recheck same line
       n++;
