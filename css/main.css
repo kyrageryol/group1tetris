@@ -75,19 +75,36 @@
   #easy {
             background-color: greenyellow;
             margin-right: 10px;
-            
-  }    
+
+  }
   #med {
             background-color: rgb(255, 189, 67);
             margin-right: 10px;
-            
-  } 
+
+  }
   #hard {
             background-color: rgb(255, 83, 83);
-  }   
+  }
   #easy:hover, #med:hover, #hard:hover {
     opacity: 75%;
   }
+
+  .button {
+     text-align: center;
+     width:120px;
+     height:40px;
+     margin-top: 25px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     border: 5px;
+     border-color: black;
+     border-radius: 5px;
+     color: black;
+     background-color: #FF8C00;
+     font-family: Helvetica, sans-serif;
+     font-size: 18px;
+   }
+
   @media screen and (min-width:   0px) and (min-height:   0px)  {
       #tetris { font-size: 0.75em; width: 250px; }
       #menu { width: 100px; height: 200px; }

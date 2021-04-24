@@ -1,7 +1,6 @@
 body {
       font-family: Helvetica, sans-serif;
       background-color: black;
-      background-image: url("instructionsbackground.png");
     }
 
 .instruct
@@ -15,7 +14,27 @@ body {
 .gameplay
 {
   font-family: serif;
-  text-align: left;
+  text-align: center;
   color: white;
   font-size: 18px;
 }
+
+.button {
+    text-align: center;
+    width:120px;
+    height:40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 5px;
+    border-color: black;
+    border-radius: 5px;
+    color: black;
+    background-color: #FF8C00;
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    position: fixed;
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    left: 50%;
+
+ }

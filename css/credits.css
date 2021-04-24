@@ -18,3 +18,19 @@ body {
   color: white;
   font-size: 18px;
 }
+
+.button {
+   text-align: center;
+   width:120px;
+   height:40px;
+   margin-top: 25px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   border: 5px;
+   border-color: black;
+   border-radius: 5px;
+   color: black;
+   background-color: #FF8C00;
+   font-family: Helvetica, sans-serif;
+   font-size: 18px;
+ }
