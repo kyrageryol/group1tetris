@@ -441,6 +441,7 @@ function drawBlock(ctx, x, y, color) {
 run();
 
 const aud = document.getElementById("playMusic").children[0];
+aud.loop = true;
 var isPlaying = false;
 aud.pause();
 
