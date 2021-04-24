@@ -9,11 +9,12 @@ $('.test').click(() => {
     return new Audio(audioUrl).play();
 });
 
-function playSound(url){
+function playSound() {
     new Audio(audioUrl).play();
-    window.open(url);
+    // window.open(url, "_self", true);
+    //location.reload();
 }
-function playBeep(){
-    new Audio(audioUrl).play();
 
+function playBeep() {
+    document.getElementById("button_beep").play();
 }

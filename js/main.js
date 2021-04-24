@@ -2,7 +2,8 @@
 //-------------------------------------------------------------------------
 // base helper methods
 //-------------------------------------------------------------------------
-const audioUrl = "sounds/zapsplat_multimedia_click_001_19367.mp3";
+const beepUrl = "sounds/zapsplat_multimedia_click_001_19367.mp3";
+const loseUrl = "sounds/zapsplat_human_male_voice_says_game_over_004_15729.mp3";
 var q;
 
 function get(id)        { return document.getElementById(id);  }
@@ -201,7 +202,7 @@ function speedChoice(button) {
 function keydown(ev) {
   var handled = false;
   if (playing) {
-    new Audio(audioUrl).play();
+    new Audio(beepUrl).play();
     switch(ev.keyCode) {
       case KEY.LEFT:   actions.push(DIR.LEFT);  handled = true; break;
       case KEY.RIGHT:  actions.push(DIR.RIGHT); handled = true; break;
@@ -224,7 +225,13 @@ function keydown(ev) {
 //-------------------------------------------------------------------------
 
 function play() { hide('start'); reset();          playing = true;  }
-function lose() { show('start'); setVisualScore(); playing = false; }
+function lose()
+{
+  show('start');
+  setVisualScore();
+  playing = false;
+  new Audio(loseUrl).play();
+}
 
 function setVisualScore(n)      { vscore = n || score; invalidateScore(); }
 function setScore(n)            { score = n; setVisualScore(n);  }
