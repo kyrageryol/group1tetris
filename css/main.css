@@ -2,6 +2,7 @@
   body {
         font-family: Helvetica, sans-serif;
         background-color: black;
+        overflow: hidden;
       }
 
   #tetris {
@@ -93,7 +94,6 @@
      text-align: center;
      width:120px;
      height:40px;
-     margin-top: 25px;
      padding-top: 10px;
      padding-bottom: 10px;
      border: 5px;
@@ -103,6 +103,8 @@
      background-color: #FF8C00;
      font-family: Helvetica, sans-serif;
      font-size: 18px;
+     position: relative;
+     bottom: 50%;
    }
 
   @media screen and (min-width:   0px) and (min-height:   0px)  {

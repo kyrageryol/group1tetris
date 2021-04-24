@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Javascript Tetris</title>
+  <title>Tetris</title>
    <link rel="stylesheet" href="css/main.css">
 </head>
-    <a href="menu.html"><button class="button" type="button">Back</button></a>
 
-    <button class = "button" type="button" id="playMusic" onclick="playPause()">
-      <audio src="sounds/Tetris.mp3" type="audio/mp3"></audio>
-      Music
-    </button>
 <body>
   <div id="tetris">
     <div id="menu">
@@ -22,7 +17,14 @@
       <p><canvas id="upcoming"></canvas></p>
       <p>score <span id="score">00000</span></p>
       <p>rows <span id="rows">0</span></p>
+      <p>  <a href="menu.html"><button class="button" type="button">Back</button></a>
+
+        <button class = "button" type="button" id="playMusic" onclick="playPause()">
+          <audio src="sounds/Tetris.mp3" type="audio/mp3"></audio>
+          Music
+        </button></p>
     </div>
+
     <canvas id="canvas">
       Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
     </canvas>
@@ -30,6 +32,7 @@
 
   <script src="js/stats.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/imageSelect.js"></script>
 
 
 
