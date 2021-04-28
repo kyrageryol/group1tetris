@@ -19,6 +19,9 @@ FUTURE
  * touch support
  * music and sound fx
 
+Testing
+===========
+We had a more manual testing procedure, when a new feature was added, such as a new button, game speed, and music, each member of the group tested the new feature and confirmed it's result. 
 
 License
 =======
